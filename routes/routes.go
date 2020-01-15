@@ -14,6 +14,7 @@ func about_handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Println("Server running on port 8000...")
 	http.HandleFunc("/", index_handler)
 	http.HandleFunc("/about", about_handler)
 	http.ListenAndServe(":8000", nil)
